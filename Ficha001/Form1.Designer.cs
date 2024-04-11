@@ -41,7 +41,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.ClientType = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.ClientCod = new System.Windows.Forms.TextBox();
+            this.ClientName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.ClientType);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.ClientCod);
+            this.tabPage1.Controls.Add(this.ClientName);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.panel2);
@@ -123,6 +123,7 @@
             this.DelBtn.TabIndex = 20;
             this.DelBtn.Text = "Deletar";
             this.DelBtn.UseVisualStyleBackColor = true;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -142,6 +143,7 @@
             this.InsertBtn.TabIndex = 18;
             this.InsertBtn.Text = "Inserir";
             this.InsertBtn.UseVisualStyleBackColor = true;
+            this.InsertBtn.Click += new System.EventHandler(this.InsertBtn_Click);
             // 
             // EditBtn
             // 
@@ -151,6 +153,7 @@
             this.EditBtn.TabIndex = 17;
             this.EditBtn.Text = "Editar";
             this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // ClientState
             // 
@@ -163,7 +166,7 @@
             // NIF
             // 
             this.NIF.Location = new System.Drawing.Point(406, 46);
-            this.NIF.Mask = "000 000 000";
+            this.NIF.Mask = "000000000";
             this.NIF.Name = "NIF";
             this.NIF.Size = new System.Drawing.Size(163, 20);
             this.NIF.TabIndex = 9;
@@ -207,13 +210,13 @@
             this.label13.Text = "Tipo de cliente";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ClientCod
+            // ClientName
             // 
-            this.ClientCod.Location = new System.Drawing.Point(23, 45);
-            this.ClientCod.Margin = new System.Windows.Forms.Padding(5);
-            this.ClientCod.Name = "ClientCod";
-            this.ClientCod.Size = new System.Drawing.Size(163, 20);
-            this.ClientCod.TabIndex = 10;
+            this.ClientName.Location = new System.Drawing.Point(23, 45);
+            this.ClientName.Margin = new System.Windows.Forms.Padding(5);
+            this.ClientName.Name = "ClientName";
+            this.ClientName.Size = new System.Drawing.Size(163, 20);
+            this.ClientName.TabIndex = 10;
             // 
             // panel3
             // 
@@ -235,7 +238,7 @@
             // PhoneNumber
             // 
             this.PhoneNumber.Location = new System.Drawing.Point(111, 46);
-            this.PhoneNumber.Mask = "000 000 000";
+            this.PhoneNumber.Mask = "000000000";
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Size = new System.Drawing.Size(163, 20);
             this.PhoneNumber.TabIndex = 8;
@@ -312,7 +315,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(163, 20);
             this.label12.TabIndex = 9;
-            this.label12.Text = "Codigo";
+            this.label12.Text = "Nome";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -548,7 +551,7 @@
         private System.Windows.Forms.MaskedTextBox NIF;
 
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ClientCod;
+        private System.Windows.Forms.TextBox ClientName;
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox City;

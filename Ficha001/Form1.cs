@@ -10,29 +10,6 @@ using System.Windows.Forms;
 
 namespace Ficha001
 {
-    public class Cliente
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Tipo { get; set; }
-        public string Email { get; set; }
-        public int Telefone { get; set; }
-        public string Morada { get; set; }
-        public DateTime DataInicio { get; set; }
-        public string Estado { get; set; }
-        
-        public Cliente(int id, string nome, string tipo, string email, int telefone, string morada, DateTime dataInicio, string estado)
-        {
-            Id = id;
-            Nome = nome;
-            Tipo = tipo;
-            Email = email;
-            Telefone = telefone;
-            Morada = morada;
-            DataInicio = dataInicio;
-            Estado = estado;
-        }
-    }
     public partial class Form1 : Form
     {
         public Form1()
@@ -42,14 +19,32 @@ namespace Ficha001
 
         private void UpdateBtn_click(object sender, EventArgs e)
         {
-            Cliente obj = new Cliente(int.Parse(ClientCod.Text),
-                Contact.Text,
+            throw new System.NotImplementedException();
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void InsertBtn_Click(object sender, EventArgs e)
+        {
+
+            ClientManager.Cliente obj = new ClientManager.Cliente(
+                0,
+                ClientName.Text,
                 ClientType.Text,
                 Email.Text,
                 int.Parse(PhoneNumber.Text),
                 EnterpriseAdress.Text,
                 DateTime.Now,
-                ClientState.Text );
+                ClientState.Text);
+            ClientManager.RegisterClient(obj);
+        }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
