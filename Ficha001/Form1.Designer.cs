@@ -31,46 +31,46 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.DelBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.InsertBtn = new System.Windows.Forms.Button();
+            this.EditBtn = new System.Windows.Forms.Button();
+            this.ClientState = new System.Windows.Forms.ComboBox();
+            this.NIF = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.ClientType = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.ClientCod = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Country = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.City = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.CAE = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Contact = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PostalCode = new System.Windows.Forms.MaskedTextBox();
+            this.EnterpriseAdress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.EnterpriseEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Enterprise = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,17 +92,17 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.maskedTextBox3);
+            this.tabPage1.Controls.Add(this.DelBtn);
+            this.tabPage1.Controls.Add(this.UpdateBtn);
+            this.tabPage1.Controls.Add(this.InsertBtn);
+            this.tabPage1.Controls.Add(this.EditBtn);
+            this.tabPage1.Controls.Add(this.ClientState);
+            this.tabPage1.Controls.Add(this.NIF);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.Controls.Add(this.ClientType);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.ClientCod);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.panel2);
@@ -115,22 +115,59 @@
             this.tabPage1.Text = "Ficha Cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // DelBtn
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(592, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 16;
+            this.DelBtn.Location = new System.Drawing.Point(608, 242);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(147, 46);
+            this.DelBtn.TabIndex = 20;
+            this.DelBtn.Text = "Deletar";
+            this.DelBtn.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox3
+            // UpdateBtn
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(406, 46);
-            this.maskedTextBox3.Mask = "000 000 000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(163, 20);
-            this.maskedTextBox3.TabIndex = 9;
-            this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UpdateBtn.Location = new System.Drawing.Point(455, 294);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(147, 46);
+            this.UpdateBtn.TabIndex = 19;
+            this.UpdateBtn.Text = "Atualizar";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_click);
+            // 
+            // InsertBtn
+            // 
+            this.InsertBtn.Location = new System.Drawing.Point(608, 294);
+            this.InsertBtn.Name = "InsertBtn";
+            this.InsertBtn.Size = new System.Drawing.Size(147, 46);
+            this.InsertBtn.TabIndex = 18;
+            this.InsertBtn.Text = "Inserir";
+            this.InsertBtn.UseVisualStyleBackColor = true;
+            // 
+            // EditBtn
+            // 
+            this.EditBtn.Location = new System.Drawing.Point(455, 242);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(147, 46);
+            this.EditBtn.TabIndex = 17;
+            this.EditBtn.Text = "Editar";
+            this.EditBtn.UseVisualStyleBackColor = true;
+            // 
+            // ClientState
+            // 
+            this.ClientState.FormattingEnabled = true;
+            this.ClientState.Location = new System.Drawing.Point(592, 46);
+            this.ClientState.Name = "ClientState";
+            this.ClientState.Size = new System.Drawing.Size(163, 21);
+            this.ClientState.TabIndex = 16;
+            // 
+            // NIF
+            // 
+            this.NIF.Location = new System.Drawing.Point(406, 46);
+            this.NIF.Mask = "000 000 000";
+            this.NIF.Name = "NIF";
+            this.NIF.Size = new System.Drawing.Size(163, 20);
+            this.NIF.TabIndex = 9;
+            this.NIF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -152,13 +189,13 @@
             this.label14.Text = "NIF";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox11
+            // ClientType
             // 
-            this.textBox11.Location = new System.Drawing.Point(213, 46);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(163, 20);
-            this.textBox11.TabIndex = 12;
+            this.ClientType.Location = new System.Drawing.Point(213, 46);
+            this.ClientType.Margin = new System.Windows.Forms.Padding(5);
+            this.ClientType.Name = "ClientType";
+            this.ClientType.Size = new System.Drawing.Size(163, 20);
+            this.ClientType.TabIndex = 12;
             // 
             // label13
             // 
@@ -170,23 +207,23 @@
             this.label13.Text = "Tipo de cliente";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox10
+            // ClientCod
             // 
-            this.textBox10.Location = new System.Drawing.Point(23, 45);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(163, 20);
-            this.textBox10.TabIndex = 10;
+            this.ClientCod.Location = new System.Drawing.Point(23, 45);
+            this.ClientCod.Margin = new System.Windows.Forms.Padding(5);
+            this.ClientCod.Name = "ClientCod";
+            this.ClientCod.Size = new System.Drawing.Size(163, 20);
+            this.ClientCod.TabIndex = 10;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.maskedTextBox2);
+            this.panel3.Controls.Add(this.PhoneNumber);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.Country);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox8);
+            this.panel3.Controls.Add(this.City);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.textBox9);
+            this.panel3.Controls.Add(this.CAE);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(456, 89);
             this.panel3.Margin = new System.Windows.Forms.Padding(20);
@@ -195,14 +232,14 @@
             this.panel3.Size = new System.Drawing.Size(299, 142);
             this.panel3.TabIndex = 8;
             // 
-            // maskedTextBox2
+            // PhoneNumber
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(111, 46);
-            this.maskedTextBox2.Mask = "000 000 000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(163, 20);
-            this.maskedTextBox2.TabIndex = 8;
-            this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PhoneNumber.Location = new System.Drawing.Point(111, 46);
+            this.PhoneNumber.Mask = "000 000 000";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(163, 20);
+            this.PhoneNumber.TabIndex = 8;
+            this.PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -214,13 +251,13 @@
             this.label6.Text = "País";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox5
+            // Country
             // 
-            this.textBox5.Location = new System.Drawing.Point(111, 106);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 20);
-            this.textBox5.TabIndex = 5;
+            this.Country.Location = new System.Drawing.Point(111, 106);
+            this.Country.Margin = new System.Windows.Forms.Padding(5);
+            this.Country.Name = "Country";
+            this.Country.Size = new System.Drawing.Size(163, 20);
+            this.Country.TabIndex = 5;
             // 
             // label7
             // 
@@ -232,13 +269,13 @@
             this.label7.Text = "Cidade";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox8
+            // City
             // 
-            this.textBox8.Location = new System.Drawing.Point(111, 74);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 20);
-            this.textBox8.TabIndex = 3;
+            this.City.Location = new System.Drawing.Point(111, 74);
+            this.City.Margin = new System.Windows.Forms.Padding(5);
+            this.City.Name = "City";
+            this.City.Size = new System.Drawing.Size(163, 20);
+            this.City.TabIndex = 3;
             // 
             // label10
             // 
@@ -250,13 +287,13 @@
             this.label10.Text = "Telefone";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox9
+            // CAE
             // 
-            this.textBox9.Location = new System.Drawing.Point(111, 14);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(163, 20);
-            this.textBox9.TabIndex = 1;
+            this.CAE.Location = new System.Drawing.Point(111, 14);
+            this.CAE.Margin = new System.Windows.Forms.Padding(5);
+            this.CAE.Name = "CAE";
+            this.CAE.Size = new System.Drawing.Size(163, 20);
+            this.CAE.TabIndex = 1;
             // 
             // label11
             // 
@@ -280,9 +317,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.Email);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.Contact);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(23, 240);
             this.panel2.Margin = new System.Windows.Forms.Padding(20);
@@ -291,13 +328,13 @@
             this.panel2.Size = new System.Drawing.Size(422, 100);
             this.panel2.TabIndex = 8;
             // 
-            // textBox6
+            // Email
             // 
-            this.textBox6.Location = new System.Drawing.Point(111, 55);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(286, 20);
-            this.textBox6.TabIndex = 3;
+            this.Email.Location = new System.Drawing.Point(111, 55);
+            this.Email.Margin = new System.Windows.Forms.Padding(5);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(286, 20);
+            this.Email.TabIndex = 3;
             // 
             // label8
             // 
@@ -309,13 +346,13 @@
             this.label8.Text = "Email";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox7
+            // Contact
             // 
-            this.textBox7.Location = new System.Drawing.Point(111, 25);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(286, 20);
-            this.textBox7.TabIndex = 1;
+            this.Contact.Location = new System.Drawing.Point(111, 25);
+            this.Contact.Margin = new System.Windows.Forms.Padding(5);
+            this.Contact.Name = "Contact";
+            this.Contact.Size = new System.Drawing.Size(286, 20);
+            this.Contact.TabIndex = 1;
             // 
             // label9
             // 
@@ -330,12 +367,12 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.PostalCode);
+            this.panel1.Controls.Add(this.EnterpriseAdress);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.EnterpriseEmail);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.Enterprise);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(23, 89);
             this.panel1.Margin = new System.Windows.Forms.Padding(20);
@@ -354,23 +391,23 @@
             this.label5.Text = "Codigo postal";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // maskedTextBox1
+            // PostalCode
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(111, 106);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.maskedTextBox1.Mask = "0000-999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(74, 20);
-            this.maskedTextBox1.TabIndex = 6;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PostalCode.Location = new System.Drawing.Point(111, 106);
+            this.PostalCode.Margin = new System.Windows.Forms.Padding(5);
+            this.PostalCode.Mask = "0000-999";
+            this.PostalCode.Name = "PostalCode";
+            this.PostalCode.Size = new System.Drawing.Size(74, 20);
+            this.PostalCode.TabIndex = 6;
+            this.PostalCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // EnterpriseAdress
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 74);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(286, 20);
-            this.textBox4.TabIndex = 5;
+            this.EnterpriseAdress.Location = new System.Drawing.Point(111, 74);
+            this.EnterpriseAdress.Margin = new System.Windows.Forms.Padding(5);
+            this.EnterpriseAdress.Name = "EnterpriseAdress";
+            this.EnterpriseAdress.Size = new System.Drawing.Size(286, 20);
+            this.EnterpriseAdress.TabIndex = 5;
             // 
             // label4
             // 
@@ -382,13 +419,13 @@
             this.label4.Text = "Endereço";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox3
+            // EnterpriseEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 44);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(286, 20);
-            this.textBox3.TabIndex = 3;
+            this.EnterpriseEmail.Location = new System.Drawing.Point(111, 44);
+            this.EnterpriseEmail.Margin = new System.Windows.Forms.Padding(5);
+            this.EnterpriseEmail.Name = "EnterpriseEmail";
+            this.EnterpriseEmail.Size = new System.Drawing.Size(286, 20);
+            this.EnterpriseEmail.TabIndex = 3;
             // 
             // label3
             // 
@@ -400,13 +437,13 @@
             this.label3.Text = "Email";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // Enterprise
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 14);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 20);
-            this.textBox2.TabIndex = 1;
+            this.Enterprise.Location = new System.Drawing.Point(111, 14);
+            this.Enterprise.Margin = new System.Windows.Forms.Padding(5);
+            this.Enterprise.Name = "Enterprise";
+            this.Enterprise.Size = new System.Drawing.Size(286, 20);
+            this.Enterprise.TabIndex = 1;
             // 
             // label2
             // 
@@ -472,42 +509,6 @@
             this.label1.Text = "Empresa";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(455, 242);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 46);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(608, 294);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 46);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Inserir";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(455, 294);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 46);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Atualizar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(608, 242);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 46);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Deletar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,48 +534,48 @@
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Button InsertBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DelBtn;
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ClientState;
 
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox ClientType;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox NIF;
 
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox ClientCod;
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox City;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox CAE;
         private System.Windows.Forms.Label label11;
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.MaskedTextBox PhoneNumber;
+        private System.Windows.Forms.TextBox Country;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Contact;
         private System.Windows.Forms.Label label9;
 
         private System.Windows.Forms.Label label5;
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox PostalCode;
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox EnterpriseEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox EnterpriseAdress;
         private System.Windows.Forms.Label label4;
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Enterprise;
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
