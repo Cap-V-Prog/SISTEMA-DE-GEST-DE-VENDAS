@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -31,10 +32,37 @@ namespace Ficha001
             }
         }
 
-        public Cliente Search(string SearchKey, int SearchType)
+   
+
+        public static void Search(string SearchKey, int SearchType,DataGridView dataGridView)
         {
-            Cliente obj = new Cliente();
-            return obj;
+            
+            Cliente obj;
+            
+            try
+            {
+                Conexao = new ConnectionFactory().GetConnection();
+                Conexao.Open();
+                string sql = $"SELECT * FROM clients WHERE Name LIKE '%{SearchKey}%'";
+                MySqlCommand execcmd = new MySqlCommand(sql, Conexao);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(execcmd);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                
+                dataGridView.DataSource = dataTable;
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Error: " + exception.Message);
+                throw; 
+            }
+            finally
+            {
+                if (Conexao.State == ConnectionState.Open)
+                {
+                    Conexao.Close();
+                }
+            }
         }
 
         public static void RegisterClient(Cliente obj)
@@ -42,15 +70,16 @@ namespace Ficha001
             try
             {
                 Conexao = new ConnectionFactory().GetConnection();
-                string sql = @"Insert into tb_clientes(estadoCli,nome_cliente,email,telefone,morada,dataInicio) values (@estadoCli,@nome_cliente,@email,@telefone,@morada,@dataInicio)";
+                string sql = @"Insert into clients(Name,Type,Email,PhoneNumber,Address,RegistrationDate,State) values (@nome_cliente,@type,@email,@telefone,@morada,@dataInicio,@estadoCli)";
                 MySqlCommand execcmd = new MySqlCommand(sql, Conexao);
                 execcmd.Parameters.AddWithValue("@estadoCli", obj.Estado);
+                execcmd.Parameters.AddWithValue("@type", obj.Tipo);
                 execcmd.Parameters.AddWithValue("@nome_cliente", obj.Nome);
                 execcmd.Parameters.AddWithValue("@email", obj.Email);
                 execcmd.Parameters.AddWithValue("@telefone", obj.Telefone);
                 execcmd.Parameters.AddWithValue("@morada", obj.Morada);
                 execcmd.Parameters.AddWithValue("@dataInicio", obj.DataInicio);
-                
+
                 Conexao.Open();
                 execcmd.ExecuteNonQuery();
                 MessageBox.Show("Cliente Registrado com sucesso");
@@ -59,6 +88,13 @@ namespace Ficha001
             {
                 MessageBox.Show("Erro a registar o cliente" + e);
                 throw;
+            }
+            finally
+            {
+                if (Conexao.State == ConnectionState.Open)
+                {
+                    Conexao.Close();
+                }
             }
         }
     }

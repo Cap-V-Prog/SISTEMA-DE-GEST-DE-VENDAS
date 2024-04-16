@@ -49,7 +49,8 @@ namespace Ficha001
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            ClientManager.Cliente obj = new ClientManager.Cliente()
+            ClientManager.Search(SearchBox1.Text,2,dataGridView1);
+            //ClientManager.Cliente obj = new ClientManager.Cliente()
         }
     }
 }

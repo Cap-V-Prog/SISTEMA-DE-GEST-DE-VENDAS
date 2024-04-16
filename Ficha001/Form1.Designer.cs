@@ -69,7 +69,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -88,11 +88,11 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(16, 15);
+            this.tabControl1.Location = new System.Drawing.Point(14, 14);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1035, 474);
+            this.tabControl1.Size = new System.Drawing.Size(1154, 645);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -116,7 +116,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1027, 445);
+            this.tabPage1.Size = new System.Drawing.Size(1146, 616);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ficha Cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -489,30 +489,32 @@
             // 
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.SearchBtn);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.SearchBox1);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(10);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1027, 445);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(10);
+            this.tabPage2.Size = new System.Drawing.Size(1146, 616);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 103);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 88);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(965, 310);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1072, 503);
             this.dataGridView1.TabIndex = 3;
             // 
             // SearchBtn
             // 
             this.SearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBtn.Location = new System.Drawing.Point(847, 39);
+            this.SearchBtn.Location = new System.Drawing.Point(958, 27);
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(151, 43);
@@ -521,20 +523,20 @@
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
-            // textBox1
+            // SearchBox1
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(212, 50);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(603, 22);
-            this.textBox1.TabIndex = 1;
+            this.SearchBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SearchBox1.Location = new System.Drawing.Point(219, 37);
+            this.SearchBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchBox1.Name = "SearchBox1";
+            this.SearchBox1.Size = new System.Drawing.Size(708, 22);
+            this.SearchBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 39);
+            this.label1.Location = new System.Drawing.Point(37, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 43);
@@ -546,7 +548,7 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1027, 445);
+            this.tabPage3.Size = new System.Drawing.Size(1146, 616);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -555,7 +557,7 @@
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1027, 445);
+            this.tabPage4.Size = new System.Drawing.Size(1146, 616);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -566,11 +568,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1068, 510);
+            this.ClientSize = new System.Drawing.Size(1182, 673);
             this.Controls.Add(this.tabControl1);
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -637,7 +641,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchBox1;
         private System.Windows.Forms.Button SearchBtn;
 
         private System.Windows.Forms.Label label1;
