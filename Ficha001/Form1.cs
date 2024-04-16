@@ -46,5 +46,10 @@ namespace Ficha001
         {
             throw new System.NotImplementedException();
         }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            ClientManager.Cliente obj = new ClientManager.Cliente()
+        }
     }
 }

@@ -31,6 +31,12 @@ namespace Ficha001
             }
         }
 
+        public Cliente Search(string SearchKey, int SearchType)
+        {
+            Cliente obj = new Cliente();
+            return obj;
+        }
+
         public static void RegisterClient(Cliente obj)
         {
             try
