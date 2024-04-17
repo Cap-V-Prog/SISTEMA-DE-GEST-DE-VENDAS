@@ -32,6 +32,32 @@ namespace Ficha001
             }
         }
 
+        public static void DelClient(int ID)
+        {
+            try
+            {
+                Conexao = new ConnectionFactory().GetConnection();
+                string sql = @"DELETE FROM clients WHERE id=(@ID)";
+                MySqlCommand execcmd = new MySqlCommand(sql, Conexao);
+                execcmd.Parameters.AddWithValue("@ID", ID);
+
+                Conexao.Open();
+                execcmd.ExecuteNonQuery();
+                MessageBox.Show("Cliente removido com sucesso");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro a remover o cliente" + e);
+                throw;
+            }
+            finally
+            {
+                if (Conexao.State == ConnectionState.Open)
+                {
+                    Conexao.Close();
+                }
+            }
+        }
    
 
         public static void Search(string SearchKey, int SearchType,DataGridView dataGridView)
