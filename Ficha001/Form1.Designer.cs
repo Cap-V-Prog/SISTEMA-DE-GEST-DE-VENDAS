@@ -232,13 +232,16 @@
             // 
             // ClientType
             // 
-            this.ClientType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ClientType.FormattingEnabled = true;
+            this.ClientType.AllowDrop = true;
+            this.ClientType.AutoCompleteCustomSource.AddRange(new string[] { "Privado", "Empresa" });
+            this.ClientType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.ClientType.Items.AddRange(new object[] { "Privado", "Empresa" });
             this.ClientType.Location = new System.Drawing.Point(164, 158);
             this.ClientType.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ClientType.Name = "ClientType";
             this.ClientType.Size = new System.Drawing.Size(366, 24);
             this.ClientType.TabIndex = 17;
+            this.ClientType.Text = "Privado";
             // 
             // label10
             // 

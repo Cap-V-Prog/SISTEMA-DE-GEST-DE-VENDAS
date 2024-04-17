@@ -38,7 +38,8 @@ namespace Ficha001
                 int.Parse(PhoneNumber.Text),
                 Adress.Text,
                 DateTime.Now,
-                ClientState.Text);
+                ClientState.Text,
+                int.Parse(NIF.Text));
             ClientManager.RegisterClient(obj);
         }
 

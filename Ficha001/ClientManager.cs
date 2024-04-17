@@ -18,8 +18,9 @@ namespace Ficha001
             public string Morada { get; set; }
             public DateTime DataInicio { get; set; }
             public string Estado { get; set; }
+            public int NIF { get; set; }
         
-            public Cliente(int id, string nome, string tipo, string email, int telefone, string morada, DateTime dataInicio, string estado)
+            public Cliente(int id, string nome, string tipo, string email, int telefone, string morada, DateTime dataInicio, string estado,int nif)
             {
                 Id = id;
                 Nome = nome;
@@ -29,6 +30,7 @@ namespace Ficha001
                 Morada = morada;
                 DataInicio = dataInicio;
                 Estado = estado;
+                NIF = nif;
             }
         }
 
@@ -96,7 +98,7 @@ namespace Ficha001
             try
             {
                 Conexao = new ConnectionFactory().GetConnection();
-                string sql = @"Insert into clients(Name,Type,Email,PhoneNumber,Address,RegistrationDate,State) values (@nome_cliente,@type,@email,@telefone,@morada,@dataInicio,@estadoCli)";
+                string sql = @"Insert into clients(Name,Type,Email,PhoneNumber,Address,RegistrationDate,State,NIF) values (@nome_cliente,@type,@email,@telefone,@morada,@dataInicio,@estadoCli,@nif)";
                 MySqlCommand execcmd = new MySqlCommand(sql, Conexao);
                 execcmd.Parameters.AddWithValue("@estadoCli", obj.Estado);
                 execcmd.Parameters.AddWithValue("@type", obj.Tipo);
@@ -105,6 +107,7 @@ namespace Ficha001
                 execcmd.Parameters.AddWithValue("@telefone", obj.Telefone);
                 execcmd.Parameters.AddWithValue("@morada", obj.Morada);
                 execcmd.Parameters.AddWithValue("@dataInicio", obj.DataInicio);
+                execcmd.Parameters.AddWithValue("@nif", obj.DataInicio);
 
                 Conexao.Open();
                 execcmd.ExecuteNonQuery();
