@@ -18,14 +18,31 @@ namespace Ficha001
             InitializeComponent();
         }
 
-        private void UpdateBtn_click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrWhiteSpace(ID.Text))
+            {
+                MessageBox.Show("É necessario selecionar o cliente primeiro!");
+                tabControl1.SelectedIndex = 1;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Tem a certeza que quer atualizar o registo?","Atenção",MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    ClientManager.Cliente obj = new ClientManager.Cliente(
+                        int.Parse(ID.Text),
+                        ClientName.Text,
+                        ClientType.Text,
+                        Email.Text,
+                        int.Parse(PhoneNumber.Text),
+                        Adress.Text,
+                        DateTime.Now,
+                        ClientState.Text,
+                        int.Parse(NIF.Text));
+                    ClientManager.UpdateClient(obj);
+                }
+            }
         }
 
         private void InsertBtn_Click(object sender, EventArgs e)
@@ -47,7 +64,7 @@ namespace Ficha001
         {
             if (string.IsNullOrWhiteSpace(ID.Text))
             {
-                MessageBox.Show("É necessario selecionar o cliente primeiro");
+                MessageBox.Show("É necessario selecionar o cliente primeiro!");
                 tabControl1.SelectedIndex = 1;
             }
             else
@@ -92,9 +109,15 @@ namespace Ficha001
                 Adress.Text = selectedRow.Cells["Address"].Value.ToString();
                 Date.Text = selectedRow.Cells["RegistrationDate"].Value.ToString();
                 ClientState.Text = selectedRow.Cells["State"].Value.ToString();
+                NIF.Text = selectedRow.Cells["NIF"].Value.ToString();
             }
 
             tabControl1.SelectedIndex = 0;
+        }
+
+        private void tabIndexChange(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new DataTable();
         }
 
         private void label13_Click(object sender, EventArgs e)

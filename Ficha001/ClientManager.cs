@@ -93,6 +93,41 @@ namespace Ficha001
             }
         }
 
+        public static void UpdateClient(Cliente obj)
+        {
+            try
+            {
+                Conexao = new ConnectionFactory().GetConnection();
+                string sql = @"UPDATE clients SET Name = @nome_cliente, Type = @type, Email = @email, PhoneNumber = @telefone, Address = @morada, RegistrationDate = @dataInicio, State = @estadoCli, NIF=@nif WHERE Id = @id";
+                MySqlCommand execcmd = new MySqlCommand(sql, Conexao);
+                execcmd.Parameters.AddWithValue("@id", obj.Id);
+                execcmd.Parameters.AddWithValue("@estadoCli", obj.Estado);
+                execcmd.Parameters.AddWithValue("@type", obj.Tipo);
+                execcmd.Parameters.AddWithValue("@nome_cliente", obj.Nome);
+                execcmd.Parameters.AddWithValue("@email", obj.Email);
+                execcmd.Parameters.AddWithValue("@telefone", obj.Telefone);
+                execcmd.Parameters.AddWithValue("@morada", obj.Morada);
+                execcmd.Parameters.AddWithValue("@dataInicio", obj.DataInicio);
+                execcmd.Parameters.AddWithValue("@nif", obj.NIF);
+
+                Conexao.Open();
+                execcmd.ExecuteNonQuery();
+                MessageBox.Show("Cliente atualizado com sucesso");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro a atualizar o cliente" + e);
+                throw;
+            }
+            finally
+            {
+                if (Conexao.State == ConnectionState.Open)
+                {
+                    Conexao.Close();
+                }
+            }
+        }
+
         public static void RegisterClient(Cliente obj)
         {
             try
@@ -107,7 +142,7 @@ namespace Ficha001
                 execcmd.Parameters.AddWithValue("@telefone", obj.Telefone);
                 execcmd.Parameters.AddWithValue("@morada", obj.Morada);
                 execcmd.Parameters.AddWithValue("@dataInicio", obj.DataInicio);
-                execcmd.Parameters.AddWithValue("@nif", obj.DataInicio);
+                execcmd.Parameters.AddWithValue("@nif", obj.NIF);
 
                 Conexao.Open();
                 execcmd.ExecuteNonQuery();
