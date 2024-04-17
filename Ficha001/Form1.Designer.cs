@@ -123,7 +123,7 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.Location = new System.Drawing.Point(811, 298);
+            this.DelBtn.Location = new System.Drawing.Point(919, 314);
             this.DelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(196, 57);
@@ -134,7 +134,7 @@
             // 
             // UpdateBtn
             // 
-            this.UpdateBtn.Location = new System.Drawing.Point(607, 362);
+            this.UpdateBtn.Location = new System.Drawing.Point(715, 379);
             this.UpdateBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(196, 57);
@@ -145,7 +145,7 @@
             // 
             // InsertBtn
             // 
-            this.InsertBtn.Location = new System.Drawing.Point(811, 362);
+            this.InsertBtn.Location = new System.Drawing.Point(919, 379);
             this.InsertBtn.Margin = new System.Windows.Forms.Padding(4);
             this.InsertBtn.Name = "InsertBtn";
             this.InsertBtn.Size = new System.Drawing.Size(196, 57);
@@ -156,7 +156,7 @@
             // 
             // EditBtn
             // 
-            this.EditBtn.Location = new System.Drawing.Point(607, 298);
+            this.EditBtn.Location = new System.Drawing.Point(715, 314);
             this.EditBtn.Margin = new System.Windows.Forms.Padding(4);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(196, 57);
@@ -168,7 +168,7 @@
             // ClientState
             // 
             this.ClientState.FormattingEnabled = true;
-            this.ClientState.Location = new System.Drawing.Point(789, 57);
+            this.ClientState.Location = new System.Drawing.Point(899, 57);
             this.ClientState.Margin = new System.Windows.Forms.Padding(4);
             this.ClientState.Name = "ClientState";
             this.ClientState.Size = new System.Drawing.Size(216, 24);
@@ -176,7 +176,7 @@
             // 
             // NIF
             // 
-            this.NIF.Location = new System.Drawing.Point(541, 57);
+            this.NIF.Location = new System.Drawing.Point(637, 57);
             this.NIF.Margin = new System.Windows.Forms.Padding(4);
             this.NIF.Mask = "000000000";
             this.NIF.Name = "NIF";
@@ -187,7 +187,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(789, 25);
+            this.label15.Location = new System.Drawing.Point(899, 23);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(217, 25);
@@ -198,7 +198,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(541, 23);
+            this.label14.Location = new System.Drawing.Point(636, 23);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(217, 25);
@@ -243,7 +243,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.CAE);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(608, 110);
+            this.panel3.Location = new System.Drawing.Point(716, 110);
             this.panel3.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(27, 25, 27, 25);
@@ -345,7 +345,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.Contact);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(31, 295);
+            this.panel2.Location = new System.Drawing.Point(31, 313);
             this.panel2.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(27, 25, 27, 25);
@@ -508,7 +508,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1072, 503);
+            this.dataGridView1.Size = new System.Drawing.Size(1072, 493);
             this.dataGridView1.TabIndex = 3;
             // 
             // SearchBtn
