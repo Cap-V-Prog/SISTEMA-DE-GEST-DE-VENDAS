@@ -1,5 +1,7 @@
 drop database if exists minipreco;
 
+create database minipreco;
+
 use minipreco;
 
 create table clients
